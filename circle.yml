@@ -9,5 +9,5 @@ machine:
 
 
 test:
-  override:
-    - tests
+  file:
+    - tests/*
