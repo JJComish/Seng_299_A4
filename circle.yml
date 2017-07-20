@@ -1,9 +1,9 @@
 machine:
 
   timezone:
-    Canada/British_Columbia# Set the timezone
+    Canada/British_Columbia #Set the timezone
 
-  # Version of ruby to use
+  # Version of python to use
   python:
     version:
       3.6.0
