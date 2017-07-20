@@ -10,4 +10,4 @@ machine:
 
 test:
   override:
-    - test
+    - tests
