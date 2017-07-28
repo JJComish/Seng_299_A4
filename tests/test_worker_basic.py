@@ -57,7 +57,7 @@ class TestWorkerBasic(unittest.TestCase):
         :return:
         """
         worker = BasicUserParseWorker("https://www.reddit.com/user/Chrikelnel")
-        self.assertEqual(1,worker.curr_links)
+        self.assertEqual(1,worker.cur_links)
 
     def test_worker_link_delay(self):
         """
