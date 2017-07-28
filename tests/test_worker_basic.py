@@ -51,7 +51,7 @@ class TestWorkerBasic(unittest.TestCase):
         self.assertEqual(len_to_crawl_after, len_to_crawl_before)
 
 
-    def test_worker_1
+    def test_worker_1:
         """
         Purpose: Test ______
 
@@ -59,7 +59,7 @@ class TestWorkerBasic(unittest.TestCase):
         """
         pass
 
-    def test_worker_2
+    def test_worker_2:
         """
         Purpose: Test ______
 
@@ -67,7 +67,7 @@ class TestWorkerBasic(unittest.TestCase):
         """
         pass
 
-    def test_worker_3
+    def test_worker_3:
         """
         Purpose: Test ______
 
