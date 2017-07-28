@@ -1,13 +1,1 @@
-machine:
 
-  timezone:
-    America/Los_Angeles #Set the timezone
-
-  # Version of python to use
-  python:
-    version: 3.6.0
-
-
-test:
-  file:
-    - tests/*
