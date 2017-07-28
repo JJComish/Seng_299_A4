@@ -1,8 +1,11 @@
-#machine:
+machine:
 
- #   python: 
+  timezone:
+    America/Los_Angeles
 
-  #    version: 3.6
+  python:
+    
+    version: 3.6
 
 test:
 
