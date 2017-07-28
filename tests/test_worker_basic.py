@@ -51,29 +51,33 @@ class TestWorkerBasic(unittest.TestCase):
         self.assertEqual(len_to_crawl_after, len_to_crawl_before)
 
 
-    def test_worker_1(self):
+    def test_worker_max_links(self):
         """
-        Purpose: Test ______
+        Purpose: Test the max_links default value is set correctly
+        :return:
+        """
+        worker = BasicUserParseWorker("https://www.reddit.com/user/Chrikelnel")
+        self.assertEqual(10,worker.max_links)
+
+    def test_worker_link_delay(self):
+        """
+        Purpose: Test test the link_delay default value is set correctly
 
         :return:
         """
-        pass
+        worker = BasicUserParseWorker("https://www.reddit.com/user/Chrikelnel")
 
-    def test_worker_2(self):
-        """
-        Purpose: Test ______
+        self.assertEqual(0.25, worker.link_delay)
 
-        :return:
+    def test_worker_url(self):
         """
-        pass
-
-    def test_worker_3(self):
-        """
-        Purpose: Test ______
+        Purpose: Test the url of the worker, after the worker is run
 
         :return:
         """
-        pass
+        worker = BasicUserParseWorker("https://www.reddit.com/user/Chrikelnel")
+        worker.run()
+        self.assertEqual("https://www.reddit.com/user/Chrikelnel",worker.crawled[0])
 """
     def test_worker_add_links_in_crawled(self):
         worker = BasicUserParseWorker("https://www.reddit.com/user/Chrikelnel")
