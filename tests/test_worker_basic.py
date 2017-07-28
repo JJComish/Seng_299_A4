@@ -22,13 +22,12 @@ class TestWorkerBasic(unittest.TestCase):
         self.assertRaises(ConnectionRefusedError, worker.run)
 
     def test_worker_parsing(self):
-    """
+        """
         Purpose: Test regular parsing mechanisms of worker
         Expectation: Load html file, send it to worker to parse, should return list of results
 
         :return:
         """
-    
         worker = BasicUserParseWorker("https://www.reddit.com/user/Chrikelnel")
         file_path = '%s/%s' % (os.path.dirname(os.path.realpath(__file__)), 'test_resources/sample_GET_response.html')
 
@@ -61,7 +60,11 @@ class TestWorkerBasic(unittest.TestCase):
         len_to_crawl_after = len(worker.to_crawl)
 
         self.assertEqual(len_to_crawl_after, len_to_crawl_before)
+
 """
+
+
+
 
 
 
