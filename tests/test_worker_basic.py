@@ -53,11 +53,11 @@ class TestWorkerBasic(unittest.TestCase):
 
     def test_worker_max_links(self):
         """
-        Purpose: Test the max_links default value is set correctly
+        Purpose: Test the current links count is updated correctly
         :return:
         """
         worker = BasicUserParseWorker("https://www.reddit.com/user/Chrikelnel")
-        self.assertEqual(10,worker.max_links)
+        self.assertEqual(1,worker.curr_links)
 
     def test_worker_link_delay(self):
         """
