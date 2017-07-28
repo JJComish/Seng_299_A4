@@ -53,11 +53,11 @@ class TestWorkerBasic(unittest.TestCase):
 
     def test_worker_max_links(self):
         """
-        Purpose: Test the current links count is updated correctly
+        Purpose: Test the current links count is propperly set to 0 before running 
         :return:
         """
         worker = BasicUserParseWorker("https://www.reddit.com/user/Chrikelnel")
-        self.assertEqual(1,worker.cur_links)
+        self.assertEqual(0,worker.cur_links)
 
     def test_worker_link_delay(self):
         """
@@ -71,13 +71,11 @@ class TestWorkerBasic(unittest.TestCase):
 
     def test_worker_url(self):
         """
-        Purpose: Test the url of the worker, after the worker is run
-
+        Purpose: Test the url of the worker, before the it is run
         :return:
         """
         worker = BasicUserParseWorker("https://www.reddit.com/user/Chrikelnel")
-        worker.run()
-        self.assertEqual("https://www.reddit.com/user/Chrikelnel",worker.crawled[0])
+        self.assertEqual("https://www.reddit.com/user/Chrikelnel",to_worker.crawl[0])
 """
     def test_worker_add_links_in_crawled(self):
         worker = BasicUserParseWorker("https://www.reddit.com/user/Chrikelnel")
