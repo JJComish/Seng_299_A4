@@ -75,7 +75,7 @@ class TestWorkerBasic(unittest.TestCase):
         :return:
         """
         worker = BasicUserParseWorker("https://www.reddit.com/user/Chrikelnel")
-        self.assertEqual("https://www.reddit.com/user/Chrikelnel",to_worker.crawl[0])
+        self.assertEqual("https://www.reddit.com/user/Chrikelnel", worker.to_crawl[0])
 """
     def test_worker_add_links_in_crawled(self):
         worker = BasicUserParseWorker("https://www.reddit.com/user/Chrikelnel")
